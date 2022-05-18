@@ -1,44 +1,51 @@
 module.exports = {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
   },
   "extends": [
-    "plugin:vue/essential"
+    "plugin:vue/essential",
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
   },
   "plugins": [
-    "vue"
+    "vue",
   ],
   "rules": {
     "indent": [
       "error",
-      2
+      2,
     ],
     "linebreak-style": [
       "error",
-      "windows"
+      "windows",
     ],
     "quotes": [
       "error",
-      "double"
+      "double",
     ],
     "semi": [
       "error",
-      "always"
+      "always",
     ],
     "semi-spacing": [
-      "error", { "before": false, "after": true }
+      "error", { "before": false, "after": true, },
     ],
+    "comma-dangle": [ "error", {
+      "arrays": "always",
+      "objects": "always",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never",
+    }, ],
     "arrow-spacing": "error",
-    "array-bracket-spacing": [ "error", "always" ],
-    "object-curly-spacing": [ "error", "always" ],
+    "array-bracket-spacing": [ "error", "always", ],
+    "object-curly-spacing": [ "error", "always", ],
     "no-empty-pattern": "error",
     "max-len": [
-      "error", { "code": 100 }
+      "error", { "code": 100, },
     ],
-  }
+  },
 };
