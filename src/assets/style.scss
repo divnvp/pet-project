@@ -53,7 +53,7 @@ $green: #7cb490;
 
 .main-img__card {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
   width: calc(100% - 100px);
@@ -62,15 +62,31 @@ $green: #7cb490;
   border: 1px solid gray;
   padding-bottom: 50px;
 
+  &-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
   &:hover {
     background-color: aliceblue;
     cursor: pointer;
   }
 
   &-title {
+    width: 100%;
     padding: 20px 0 15px 0;
     font-size: 21px;
-    font-weight: bolder;
     text-transform: uppercase;
     color: $black;
   }
@@ -83,13 +99,21 @@ $green: #7cb490;
   }
 
   img {
-    padding: 15px 0 15px 0;
-    height: 300px;
-    width: 430px;
+    margin: 15px 0 15px 0;
+    height: 30vh;
+    width: 23vw;
+    border: 15px solid $light-yellow;
   }
 
   span {
     font-weight: lighter;
     font-size: 14px;
+  }
+
+  &-explanation {
+    padding-right: 20px;
+    text-align: start;
+    font-size: 12px;
+    color: grey;
   }
 }
