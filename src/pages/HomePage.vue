@@ -5,14 +5,16 @@ import DailyImage from "../components/home/DailyImage.vue";
 export default {
   name: "HomePage",
 
-  components: { UIPage, DailyImage }
+  components: { UIPage, DailyImage, },
 };
 </script>
 
 <template>
   <UIPage>
     <template #page>
-      <DailyImage />
+      <div class="ui-page__home">
+        <DailyImage />
+      </div>
     </template>
   </UIPage>
 </template>
