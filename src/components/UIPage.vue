@@ -3,7 +3,7 @@ import UISidebar from "./UISidebar.vue";
 export default {
   name: "UIPage",
 
-  components: { UISidebar }
+  components: { UISidebar, },
 };
 </script>
 
