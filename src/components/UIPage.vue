@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <div class="ui-page__main">
+  <div>
     <u-i-sidebar class="ui-page__sidebar" />
 
     <slot name="page" />
