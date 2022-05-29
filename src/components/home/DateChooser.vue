@@ -1,5 +1,5 @@
 <script>
-import { computed, ref, watch } from "vue";
+import { computed, ref } from "vue";
 
 export default {
   name: "DateChooser",
@@ -49,11 +49,11 @@ export default {
 </script>
 
 <template>
-  <div class="ui-row">
+  <div>
     <span class="ui-datepicker__label">AFTER:</span>
-    <input type="date" v-model="startDateValue">
+    <input type="date" v-model="startDateValue" class="ui-datepicker__input">
 
     <span class="ui-datepicker__label">BEFORE:</span>
-    <input type="date" v-model="endDateValue">
+    <input type="date" v-model="endDateValue" class="ui-datepicker__input">
   </div>
 </template>
