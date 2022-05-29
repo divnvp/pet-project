@@ -49,40 +49,32 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="ui-column">
     <DateChooser @update-date="updateParams" />
 
     <div v-for="pod in planetaryApods" :key="pod.date" class="main-img__card">
       <div class="ui-column">
-        <div class="ui-row">
-          <div class="ui-column">
-            <h2 class="main-img__card-title">{{ pod.title }}</h2>
+        <h2 class="main-img__card-title">{{ pod.title }}</h2>
 
-            <hr />
-          </div>
-        </div>
+        <UILoader v-if="isLoading" />
 
-        <div class="ui-row">
-          <div class="ui-column">
-            <UILoader v-if="isLoading" />
+        <img
+          v-if="!isLoading"
+          id="img"
+          :src="pod.url"
+          alt="Daily pic"
+        >
 
-            <img
-                v-if="!isLoading"
-                id="img"
-                :src="pod.url"
-                alt="Daily pic"
-            >
+        <span class="main-img__card-explanation">{{ pod.date }}</span>
 
-            <span>{{ pod.date }}</span>
+        <span class="main-img__card-explanation">{{ pod.copyright || "" }}</span>
+      </div>
 
-            <span>{{ pod.copyright || "" }}</span>
-          </div>
-
-          <div class="ui-column">
-          <span class="main-img__card-explanation">
-            {{ pod.explanation }}
-          </span>
-          </div>
+      <div class="ui-row__start" style="margin-left: 20px;">
+        <div class="ui-column">
+        <span class="main-img__card-explanation">
+          {{ pod.explanation }}
+        </span>
         </div>
       </div>
     </div>
