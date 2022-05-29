@@ -5,10 +5,8 @@ $red: #d31900;
 $green: #7cb490;
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  font-family: 'Abel', monospace;
+  background-color: white;
 }
 
 .ui-column {
@@ -27,31 +25,40 @@ $green: #7cb490;
   width: 100%;
 }
 
-.ui-page {
-  &__main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.ui-row__start {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
 
+.ui-page {
   &__sidebar {
     display: flex;
     flex-direction: row;
-    background-color: $black;
+    background-color: $orange;
+    justify-content: flex-end;
+    align-items: center;
     width: 100%;
     position: absolute;
     left: 0;
     top: 0;
+    height: 100px;
 
     &-link {
       color: white;
       text-decoration: none;
       padding: 20px 8px 8px 8px;
       font-size: 16px;
-      font-weight: bold;
+      font-weight: lighter;
+      height: calc(100% - 30px);
+      display: flex;
+      align-items: flex-end;
+      background-color: $orange;
 
       &:hover {
         background-color: rgba(0, 0, 0, 0.5);
+        color: white;
       }
     }
   }
@@ -62,47 +69,32 @@ $green: #7cb490;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 130px;
   }
 }
 
 .main-img__card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 100%;
-  width: 100%;
-  background-color: white;
+  width: calc(100% - 500px);
   border-radius: 20px;
-  border: 1px solid gray;
-  padding-bottom: 50px;
+  border: 1px solid $black;
   margin: 30px 0;
-
-  &:hover {
-    background-color: aliceblue;
-    cursor: pointer;
-  }
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 
   &-title {
     width: 100%;
-    padding: 20px 0 15px 0;
     font-size: 21px;
     text-transform: uppercase;
+    font-weight: lighter;
     color: $black;
   }
 
-  hr {
-    width: 100%;
-    color: gray;
-    border: none;
-    border-top: 1px solid gray;
-  }
-
   img {
-    margin: 15px 0 15px 0;
-    height: 30vh;
-    width: 23vw;
-    border: 15px solid $light-yellow;
+    height: 170px;
+    width: 217px;
   }
 
   span {
@@ -114,43 +106,29 @@ $green: #7cb490;
     padding-right: 20px;
     text-align: start;
     font-size: 12px;
-    color: grey;
+    color: $black;
   }
 }
 
 .ui-datepicker {
-  margin: 20px;
-
   &__label {
-    color: gray;
-    font-weight: bold;
+    color: $black;
+    font-weight: bolder;
     font-size: 14px;
     margin: 0 10px;
   }
 
-  &__icon {
-    color: gray;
-    padding-right: 10px;
-  }
-
-  &__calendar {
-    background-color: #fff2af;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 18px;
-    width: 150px;
+  &__input {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid $black;
 
     &:hover {
-      color: white;
-      background-color: #ff6600;
+      background-color: rgba(255, 255, 255, 0.83);
       cursor: pointer;
-    }
-
-    &:focus,
-    &:active {
-      background-color: #fff2af;
-      outline: none;
     }
   }
 }
