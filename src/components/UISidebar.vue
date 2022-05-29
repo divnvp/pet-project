@@ -19,7 +19,7 @@ export default {
         HOME
       </router-link>
 
-      <router-link to="/" class="ui-page__sidebar-link">
+      <router-link to="/earth" class="ui-page__sidebar-link">
         <span class="material-icons-outlined">public</span>
 
         EARTH
