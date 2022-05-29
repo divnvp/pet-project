@@ -6,21 +6,37 @@ export default {
 
 <template>
   <div>
-    <router-link to="/" class="ui-page__sidebar-link">
-      HOME
-    </router-link>
+    <div class="ui-search-box">
+      <span class="material-icons-outlined">search</span>
 
-    <router-link to="/" class="ui-page__sidebar-link">
-      EARTH
-    </router-link>
+      <input placeholder="Search...">
+    </div>
 
-    <router-link to="/" class="ui-page__sidebar-link">
-      MARS
-    </router-link>
+    <div class="ui-router-links">
+      <router-link to="/" class="ui-page__sidebar-link">
+        <span class="material-icons-outlined">circle</span>
 
-    <router-link to="/" class="ui-page__sidebar-link">
-      MOON
-    </router-link>
+        HOME
+      </router-link>
+
+      <router-link to="/" class="ui-page__sidebar-link">
+        <span class="material-icons-outlined">public</span>
+
+        EARTH
+      </router-link>
+
+      <router-link to="/" class="ui-page__sidebar-link">
+        <span class="material-icons">circle</span>
+
+        MARS
+      </router-link>
+
+      <router-link to="/" class="ui-page__sidebar-link">
+        <span class="material-icons-outlined">dark_mode</span>
+
+        MOON
+      </router-link>
+    </div>
   </div>
 </template>
 

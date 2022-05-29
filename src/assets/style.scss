@@ -4,6 +4,11 @@ $orange: #ff6600;
 $red: #d31900;
 $green: #7cb490;
 
+* {
+  margin: 0;
+  top: 0;
+}
+
 #app {
   font-family: 'Abel', monospace;
   background-color: white;
@@ -32,15 +37,48 @@ $green: #7cb490;
   justify-content: flex-start;
 }
 
+.ui-router-links {
+  display: flex;
+  height: 100%;
+}
+
+.ui-search-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+  input {
+    background-color: rgba(0, 0, 0, 0.13);
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 35px 0 5px;
+    border: 1px solid white;
+    font-size: 18px;
+    color: white;
+    width: 100%;
+
+    &::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.49);
+    }
+  }
+
+  span {
+    color: white;
+    margin-left: 10px;
+  }
+}
+
 .ui-page {
   &__sidebar {
     display: flex;
     flex-direction: row;
     background-color: $orange;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    position: absolute;
+    position: sticky;
     left: 0;
     top: 0;
     height: 100px;
@@ -53,12 +91,30 @@ $green: #7cb490;
       font-weight: lighter;
       height: calc(100% - 30px);
       display: flex;
-      align-items: flex-end;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
       background-color: $orange;
+
+      span {
+        font-size: 18px;
+      }
 
       &:hover {
         background-color: rgba(0, 0, 0, 0.5);
         color: white;
+
+        span {
+          color: $green;
+        }
+      }
+
+      &:focus, &:active {
+        color: white;
+
+        span {
+          color: $red;
+        }
       }
     }
   }
@@ -69,7 +125,7 @@ $green: #7cb490;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 130px;
+    margin-top: 30px;
   }
 }
 
@@ -78,7 +134,7 @@ $green: #7cb490;
   width: calc(100% - 500px);
   border-radius: 20px;
   border: 1px solid $black;
-  margin: 30px 0;
+  margin: 10px 0;
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -90,6 +146,7 @@ $green: #7cb490;
     text-transform: uppercase;
     font-weight: lighter;
     color: $black;
+    margin-bottom: 10px;
   }
 
   img {
@@ -103,6 +160,7 @@ $green: #7cb490;
   }
 
   &-explanation {
+    margin-top: 10px;
     padding-right: 20px;
     text-align: start;
     font-size: 12px;
