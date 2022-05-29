@@ -16,6 +16,7 @@ export default {
     const parameters = ref({
       start_date: new Date(new Date() - 1000 * 60 * 60 * 24).toISOString().substring(0 ,10),
       end_date: new Date().toISOString().substring(0 ,10),
+      thumbs: true,
     });
 
     const planetaryApods = ref([]);
@@ -59,11 +60,15 @@ export default {
         <UILoader v-if="isLoading" />
 
         <img
-          v-if="!isLoading"
+          v-if="!isLoading && pod.media_type === 'image'"
           id="img"
           :src="pod.url"
           alt="Daily pic"
         >
+
+        <figure v-if="!isLoading && pod.media_type === 'video'">
+          <iframe :src="pod.url" />
+        </figure>
 
         <span class="main-img__card-explanation">{{ pod.date }}</span>
 
