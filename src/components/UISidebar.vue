@@ -9,6 +9,18 @@ export default {
     <router-link to="/" class="ui-page__sidebar-link">
       HOME
     </router-link>
+
+    <router-link to="/" class="ui-page__sidebar-link">
+      EARTH
+    </router-link>
+
+    <router-link to="/" class="ui-page__sidebar-link">
+      MARS
+    </router-link>
+
+    <router-link to="/" class="ui-page__sidebar-link">
+      MOON
+    </router-link>
   </div>
 </template>
 
