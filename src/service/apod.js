@@ -1,6 +1,4 @@
-import { api } from "./api";
-
-const apiKey = "vLob0pjrATbXzwsMpPb6KxQ1khIJSL6qrTfhq3nV";
+import { api, apiKey } from "./api";
 
 export function getDailyPictures (params) {
   const searchParams = new URLSearchParams({ api_key: apiKey, ...params, });
